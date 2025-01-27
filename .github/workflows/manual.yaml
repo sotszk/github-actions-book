@@ -1,0 +1,16 @@
+name: Manual
+on:
+  workflow_dispatch:
+    inputs:
+      greeting:
+        type: string
+        default: "Hello"
+        required: true
+        description: 'Greeting message'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Message
+      run: echo ${{ inputs.greeting }}
