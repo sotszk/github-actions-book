@@ -7,6 +7,14 @@ on:
         default: "Hello"
         required: true
         description: 'Greeting message'
+      log_level:
+        type: choice
+        default: "info"
+        options:
+          - "debug"
+          - "info"
+          - "warning"
+          - "error"
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -14,3 +22,5 @@ jobs:
     - uses: actions/checkout@v4
     - name: Message
       run: echo ${{ inputs.greeting }}
+    - name: Log level
+      run: echo Log level -> ${{ inputs.log_level }}
