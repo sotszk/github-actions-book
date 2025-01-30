@@ -10,3 +10,10 @@ jobs:
     - name: Tree
       run: |
         tree
+    - name: branch_name
+      run: |
+        echo ${{ github.head_ref }}
+    - name: repository_name
+      run: echo ${{ github.repository }}
+    - name: event
+      run: echo event -> ${{ github.event }}
