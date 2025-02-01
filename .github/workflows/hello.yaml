@@ -1,8 +1,12 @@
 name: Hello
 on: push
+env:
+  foo: bar
 jobs:
   run:
     runs-on: ubuntu-latest
+    env:
+      foo: baz
     steps:
     - uses: actions/checkout@v4
     - name: Hello
@@ -17,3 +21,7 @@ jobs:
       run: echo ${{ github.repository }}
     - name: event_name
       run: echo event -> ${{ github.event_name }}
+    - name: check env override
+      run: echo foo -> ${{ env.foo }}
+      env:
+        foo: fiz
