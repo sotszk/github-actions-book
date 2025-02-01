@@ -21,10 +21,10 @@ jobs:
       run: |
         echo "${{ env.ACTOR }}"
     - name: repository_name
-      run: echo "$REPOSITORY"
+      run: echo "${{ env.REPOSITORY }}"
     - name: event_name
-      run: echo event -> "${{ env.REPOSITORY }}"
+      run: echo event -> ${{ env.EVENT_NAME }}
     - name: check env override
-      run: echo foo -> "${{ env.EVENT_NAME }}"
+      run: echo foo -> "${{ env.FOO }}"
       env:
         FOO: fiz
