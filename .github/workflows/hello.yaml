@@ -19,12 +19,12 @@ jobs:
         tree
     - name: actor
       run: |
-        echo "$ACTOR"
+        echo "${{ env.ACTOR }}"
     - name: repository_name
       run: echo "$REPOSITORY"
     - name: event_name
-      run: echo event -> "$EVENT_NAME"
+      run: echo event -> "${{ env.REPOSITORY }}"
     - name: check env override
-      run: echo foo -> "$FOO"
+      run: echo foo -> "${{ env.EVENT_NAME }}"
       env:
         FOO: fiz
