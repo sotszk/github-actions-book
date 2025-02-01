@@ -1,0 +1,46 @@
+# デフォルト環境変数
+
+- GITHUB_ACTION: アクション名
+- GITHUB_ACTION_PATH: アクションのパス
+- GITHUB_ACTION_REPOSITORY: アクションのリポジトリ
+- GITHUB_ACTIONS: GitHub Actionsで実行されている場合はtrue
+- GITHUB_ACTOR: ワークフローをトリガーしたユーザー名
+- GITHUB_ACTOR_ID: ワークフローをトリガーしたユーザーのID
+- GITHUB_API_URL: GitHub APIのURL（通常はhttps://api.github.com）
+- GITHUB_BASE_REF: PRのベースブランチ名
+- GITHUB_ENV: 環境変数ファイルのパス
+- GITHUB_EVENT_NAME: ワークフローをトリガーしたイベント名
+- GITHUB_EVENT_PATH: イベントペイロードのパス
+- GITHUB_GRAPHQL_URL: GitHub GraphQL APIのURL
+- GITHUB_HEAD_REF: PRのヘッドブランチ名
+- GITHUB_JOB: 現在のジョブのID
+- GITHUB_OUTPUT: ステップの出力ファイルのパス
+- GITHUB_PATH: PATH変数の更新用ファイルのパス
+- GITHUB_REF: トリガーしたブランチまたはタグのref
+- GITHUB_REF_NAME: ブランチまたはタグ名（refs/プレフィックスなし）
+- GITHUB_REF_PROTECTED: 保護されたブランチの場合はtrue
+- GITHUB_REF_TYPE: branchまたはtag
+- GITHUB_REPOSITORY: owner/repo形式のリポジトリ名
+- GITHUB_REPOSITORY_ID: リポジトリのID
+- GITHUB_REPOSITORY_OWNER: リポジトリのオーナー名
+- GITHUB_REPOSITORY_OWNER_ID: リポジトリオーナーのID
+- GITHUB_RETENTION_DAYS: 実行ログとアーティファクトの保持日数
+- GITHUB_RUN_ATTEMPT: ワークフロー実行の試行回数
+- GITHUB_RUN_ID: ワークフロー実行のユニークID
+- GITHUB_RUN_NUMBER: リポジトリにおけるワークフロー実行の通し番号
+- GITHUB_SERVER_URL: GitHubサーバーのURL（通常はhttps://github.com）
+- GITHUB_SHA: コミットのSHA
+- GITHUB_STEP_SUMMARY: ステップサマリーファイルのパス
+- GITHUB_TRIGGERING_ACTOR: ワークフローをトリガーしたアクター
+- GITHUB_WORKFLOW: ワークフロー名
+- GITHUB_WORKFLOW_REF: ワークフローファイルへの参照
+- GITHUB_WORKFLOW_SHA: ワークフローファイルのコミットSHA
+- GITHUB_WORKSPACE: ワークスペースディレクトリのパス
+- ランナー関連の環境変数
+- RUNNER_ARCH: ランナーのアーキテクチャ（X86, X64, ARM, ARM64）
+- RUNNER_DEBUG: デバッグログが有効な場合は1
+- RUNNER_ENVIRONMENT: github-hostedまたはself-hosted
+- RUNNER_NAME: ランナーの名前
+- RUNNER_OS: ランナーのOS（Linux, Windows, macOS）
+- RUNNER_TEMP: ランナーの一時ディレクトリのパス
+- RUNNER_TOOL_CACHE: ランナーのツールキャッシュディレクトリ
