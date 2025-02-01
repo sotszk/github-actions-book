@@ -6,7 +6,10 @@ jobs:
   run:
     runs-on: ubuntu-latest
     env:
-      foo: baz
+      FOO: baz
+      ACTOR: ${{ github.actor }}
+      REPOSITORY: ${{ github.repository }}
+      EVENT_NAME: ${{ github.event_name }}
     steps:
     - uses: actions/checkout@v4
     - name: Hello
@@ -16,12 +19,12 @@ jobs:
         tree
     - name: actor
       run: |
-        echo ${{ github.actor }}
+        echo ${{ env.ACTOR }}
     - name: repository_name
-      run: echo ${{ github.repository }}
+      run: echo ${{ env.REPOSITORY }}
     - name: event_name
-      run: echo event -> ${{ github.event_name }}
+      run: echo event -> ${{ env.EVENT_NAME }}
     - name: check env override
-      run: echo foo -> ${{ env.foo }}
+      run: echo FOO -> ${{ env.FOO }}
       env:
-        foo: fiz
+        FOO: fiz
