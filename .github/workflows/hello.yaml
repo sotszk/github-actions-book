@@ -19,12 +19,12 @@ jobs:
         tree
     - name: actor
       run: |
-        echo "${ACTOR}"
+        echo "$ACTOR"
     - name: repository_name
-      run: echo "${REPOSITORY}"
+      run: echo "$REPOSITORY"
     - name: event_name
-      run: echo event -> "${EVENT_NAME}"
+      run: echo event -> "$EVENT_NAME"
     - name: check env override
-      run: echo FOO -> "${FOO}"
+      run: echo foo -> "$FOO"
       env:
         FOO: fiz
