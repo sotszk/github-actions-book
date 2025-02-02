@@ -29,7 +29,7 @@ jobs:
         env:
           FOO: fiz
       - name: Format String
-        run: echo "${{ format('{1} {2}-san', env.LAST_NAME, env.FIRST_NAME) }}"
+        run: echo "${{ format('{0} {1}-san', env.LAST_NAME, env.FIRST_NAME) }}"
         env:
           FIRST_NAME: Sota
           LAST_NAME: Suzuki
