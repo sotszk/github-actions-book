@@ -11,20 +11,20 @@ jobs:
       REPOSITORY: ${{ github.repository }}
       EVENT_NAME: ${{ github.event_name }}
     steps:
-    - uses: actions/checkout@v4
-    - name: Hello
-      run: echo Hello, world!
-    - name: Tree
-      run: |
-        tree
-    - name: actor
-      run: |
-        echo "${{ env.ACTOR }}"
-    - name: repository_name
-      run: echo "${{ env.REPOSITORY }}"
-    - name: event_name
-      run: echo event -> "${{ env.EVENT_NAME }}"
-    - name: check env override
-      run: echo foo -> "${{ env.FOO }}"
-      env:
-        FOO: fiz
+      - uses: actions/checkout@v4
+      - name: Hello
+        run: echo Hello, world!
+      - name: Tree
+        run: |
+          tree
+      - name: Actor
+        run: |
+          echo "${{ env.ACTOR }}"
+      - name: Repository Name
+        run: echo "${{ env.REPOSITORY }}"
+      - name: Event Name
+        run: echo event -> "${{ env.EVENT_NAME }}"
+      - name: Env Override
+        run: echo foo -> "${{ env.FOO }}"
+        env:
+          FOO: fiz
